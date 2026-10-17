@@ -1,0 +1,11 @@
+/* 自定义样式：会被 scripts/custom-css.js 注入到每个页面的 <head> 里 */
+
+/* 页脚默认有两行版权：
+     第一行  © 2026 月鸟  Powered by Hexo & Icarus
+     第二行  © 2026 月鸟
+   这里隐藏第一行，只保留第二行。
+   注意：如果哪天把 _config.icarus.yml 里的 footer.copyright 清空了，
+   两行都会消失，记得同步删掉下面这条规则。 */
+.footer .level-start > p.is-size-7:nth-of-type(1) {
+    display: none;
+}
