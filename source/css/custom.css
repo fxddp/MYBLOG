@@ -78,6 +78,25 @@ body {
     margin-right: auto;
 }
 
+/* 竖构图的照片按比例收窄，否则一张图要占大半屏 */
+.content img.portrait {
+    max-width: 60%;
+}
+
+/* 主题会把每张图包进 <a class="gallery-item">（点击放大），
+   这个 a 默认是行内元素，包着块级图片会让图注叠到图片上，改成块级 */
+.content a.gallery-item {
+    display: block;
+}
+
+/* 主题的 main.js 会把图片的 alt 渲染成图注，这里统一一下字号和颜色 */
+.content .caption {
+    color: #8b93a1;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0.45em 0 0;
+}
+
 .content table th {
     background: #f6f7f9;
     font-weight: 600;
