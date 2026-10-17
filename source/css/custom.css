@@ -1,11 +1,178 @@
-/* 自定义样式：会被 scripts/custom-css.js 注入到每个页面的 <head> 里 */
+/* ==========================================================
+   月鸟博客 · 自定义样式
+   原则：只调排版、留白和质感，不加装饰性动效
+   这份文件由 scripts/custom-css.js 注入到每个页面的 <head>
+   ========================================================== */
 
-/* 页脚默认有两行版权：
+/* ---------- 字体：优先系统字体，中英文更统一 ---------- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+                 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 15px;
+}
+
+/* ---------- 布局宽度 ----------
+   主题默认在 1440px 屏幕下容器只有 960px，两侧各空 240px。
+   这里放宽到 1120px，超宽屏再放到 1180px。 */
+@media screen and (min-width: 1280px) {
+    .is-2-column .container {
+        max-width: 1120px;
+        width: 1120px;
+    }
+    .is-1-column .container {
+        max-width: 920px;
+        width: 920px;
+    }
+}
+
+@media screen and (min-width: 1560px) {
+    .is-2-column .container {
+        max-width: 1180px;
+        width: 1180px;
+    }
+}
+
+/* ---------- 正文排版 ---------- */
+.content {
+    line-height: 1.85;
+    color: #3f4653;
+}
+
+.content p {
+    margin-bottom: 1.1em;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5 {
+    font-weight: 600;
+    color: #1e2430;
+    letter-spacing: 0.005em;
+}
+
+/* 二级标题加一条极淡的分隔线，长文里更好定位 */
+.content h2 {
+    margin-top: 2em;
+    padding-bottom: 0.4em;
+    border-bottom: 1px solid #edeff3;
+}
+
+.content h3 {
+    margin-top: 1.6em;
+}
+
+.content blockquote {
+    border-left: 3px solid #3d5a86;
+    background: #f7f8fa;
+    border-radius: 0 6px 6px 0;
+    color: #4a5260;
+}
+
+.content img {
+    border-radius: 6px;
+}
+
+.content table th {
+    background: #f6f7f9;
+    font-weight: 600;
+}
+
+.content code {
+    background: #f1f3f6;
+    border-radius: 4px;
+    padding: 0.12em 0.38em;
+    font-size: 0.92em;
+}
+
+/* ---------- 卡片：更柔的圆角和阴影 ---------- */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(17, 24, 39, 0.04),
+                0 10px 26px -16px rgba(17, 24, 39, 0.14);
+    transition: box-shadow 0.22s ease;
+}
+
+.card:hover {
+    box-shadow: 0 2px 4px rgba(17, 24, 39, 0.05),
+                0 16px 34px -18px rgba(17, 24, 39, 0.2);
+}
+
+/* ---------- 文章标题 ---------- */
+.article .title {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+/* ---------- 导航 ---------- */
+.navbar-brand .navbar-item {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.navbar-item {
+    transition: color 0.18s ease;
+}
+
+/* ---------- 文章元信息：日期、阅读时长 ---------- */
+.article-meta {
+    color: #8d95a3;
+    letter-spacing: 0.05em;
+}
+
+.article-meta a {
+    color: #8d95a3;
+}
+
+/* ---------- 链接：用深蓝，和夜空图标呼应 ---------- */
+.content a {
+    color: #3d5a86;
+}
+
+.content a:hover {
+    color: #22385c;
+}
+
+/* ---------- 代码块圆角 ---------- */
+.highlight,
+.content pre {
+    border-radius: 8px;
+}
+
+/* ---------- 文章底部许可块：CC 装饰图淡一点 ---------- */
+.article-licensing::after {
+    opacity: 0.05;
+    right: -24px;
+}
+
+/* ---------- 侧边栏小标题：最新文章 / 归档 ---------- */
+.menu-label {
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #9aa2af;
+}
+
+/* ---------- 归档时间线：圆点和竖线稍微清晰一点 ---------- */
+.timeline {
+    border-left-color: #e3e7ed;
+}
+
+.timeline .media::before {
+    background: #ccd2dc;
+}
+
+/* ---------- 页脚 ---------- */
+.footer {
+    border-top: 1px solid #eceef2;
+}
+
+/* ---------- 页脚默认有两行版权：
      第一行  © 2026 月鸟  Powered by Hexo & Icarus
      第二行  © 2026 月鸟
    这里隐藏第一行，只保留第二行。
    注意：如果哪天把 _config.icarus.yml 里的 footer.copyright 清空了，
-   两行都会消失，记得同步删掉下面这条规则。 */
+   两行都会消失，记得同步删掉下面这条规则。 ---------- */
 .footer .level-start > p.is-size-7:nth-of-type(1) {
     display: none;
 }

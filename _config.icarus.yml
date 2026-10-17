@@ -8,7 +8,7 @@ logo: ''
 # Page metadata configurations
 head:
     # URL or path to the website's icon
-    favicon: /img/favicon.svg
+    favicon: /img/favicon-moon.svg
     # Web application manifests configuration
     # https://developer.mozilla.org/en-US/docs/Web/Manifest
     manifest:
@@ -303,7 +303,8 @@ providers:
     # jsdelivr 在国内经常抽风，这里换成 cdnjs
     cdn: cdnjs
     # 可选：google / loli / fontim / ustc
-    # 国内访问 Google Fonts 不通，用中科大镜像
-    fontcdn: ustc
+    # 注意：本项现在实际不生效——scripts/strip-webfont.js 会把字体外链整段删掉。
+    # 原因见该脚本注释（缺 display=swap 会导致文字短暂不可见）。
+    fontcdn: loli
     # 可选：loli / fontawesome
     iconcdn: loli
