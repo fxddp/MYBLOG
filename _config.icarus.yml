@@ -133,7 +133,8 @@ article:
     # Whether to show estimated article reading time
     readtime: true
     # Whether to show updated time. For "auto", shows article update time only when page.updated is set and it is different from page.date
-    update_time: true
+    # 本站 updated_option 设为 date，更新时间恒等于发布时间，显示出来只是重复，故关闭
+    update_time: false
     # Article licensing block
     licenses:
         Creative Commons:

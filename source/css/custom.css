@@ -72,6 +72,10 @@ body {
 
 .content img {
     border-radius: 6px;
+    /* 配图宽度小于正文列宽，居中显示，避免贴左留出右侧空白 */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content table th {
