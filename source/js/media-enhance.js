@@ -1,5 +1,5 @@
 /*!
- * 月鸟博客 · 媒体增强（source/js/media-enhance.js）
+ * 鸟的博客 · 媒体增强（source/js/media-enhance.js）
  *
  * 作用一：把正文里的 <video> / <audio> / <model-viewer> 包一层自适应容器，
  *         让宽视频、3D 模型在手机上也正常显示。

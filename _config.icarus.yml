@@ -116,7 +116,7 @@ navbar:
 # Page footer configurations
 footer:
     # Copyright text
-    copyright: © 2026 月鸟
+    copyright: © 2026 鸟的博客
     # Links to be shown on the right of the footer section
     links: {}
 # Article related configurations
