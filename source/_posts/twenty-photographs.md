@@ -4,7 +4,7 @@ date: 2026-10-17 15:56:00
 slug: twenty-photographs
 tags: [摄影, 摄影史]
 categories: [摄影]
-author: shun
+author: 月鸟
 ---
 
 1826 年夏天，法国人涅普斯在他乡下的房子里，把一块涂了沥青的金属板塞进暗箱，对着窗外的鸽舍和一棵梨树，让它晒了整整八个小时。
